@@ -47,6 +47,7 @@ public class SeleniumProg2 {
    driver.findElement(By.xpath("//input[@data-testid='traveller-1-first-traveller-info-input-box']")).sendKeys("PREM");
    driver.findElement(By.xpath("//input[@data-testid='traveller-1-last-traveller-info-input-box']")).sendKeys("M");
    driver.findElement(By.xpath("(//div[@data-focusable='true'])[15]")).click();
+		driver.quit();
   
 	}
 }
