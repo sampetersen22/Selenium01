@@ -41,6 +41,7 @@ public class SeleniumProg {
        driver.findElement(By.xpath("(//input[@type='text'])[6]")).sendKeys("KUMAR");
        driver.findElement(By.xpath("(//input[@type='text'])[7]")).sendKeys("M");
        driver.findElement(By.xpath("(//div[contains(text(),'Next')])[1]")).click();
+		driver.quit();
         		}
 
 }
