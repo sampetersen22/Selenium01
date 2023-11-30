@@ -58,8 +58,14 @@ public class loginpage extends pageMethods {
 	WebElement cred15;
 	@FindBy(xpath="(//div[@data-focusable='true'])[15]")
 	WebElement cred16;
-	@FindBy(xpath="//body/div[@id='react-root']/div[@id='main-container']/div[@data-testid='application-id']/div/div/div/div[2]/div[1]/div[1]/div[4]")
+	@FindBy(xpath="//div[@datla-testid='blueRibbonBag']//div[@data-testid='expandableList']//div[@aria-disabled='true']//div//div[@data-testid='expandableList-header']//div//div[@data-focusable='true']")
 	WebElement cred17;
+	@FindBy(xpath="(//div[@dir='auto'][normalize-space()='BLR - DEL'])[1]")
+	WebElement cred18;
+	@FindBy(xpath="(//div[contains(text(),'Done')])[1]")
+	WebElement cred19;
+	@FindBy(xpath="//*[@id=\'main-container\']/div/div[5]/div/div/div[2]/div/div/div[4]")
+	WebElement cred20;
 	
 	@Test
 	public void logindetails() throws InterruptedException {
@@ -70,8 +76,15 @@ public class loginpage extends pageMethods {
 	   Thread.sleep(5000);
 	   number.sendKeys("8667500480");
 	   pswd.sendKeys("Maxval123#");
-	   cred.click(); Thread.sleep(5000);
-	   test.log(Status.PASS, "Login successfully");
+	   try {
+		cred.click();
+		 test.log(Status.PASS, "Login successfully");
+	} catch (Exception e) {
+		test.log(Status.FAIL, "Login failed");
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}  Thread.sleep(5000);
+	  
 	   cred1.click();
 	   cred2.click();
 	   cred3.click();
@@ -92,8 +105,12 @@ public class loginpage extends pageMethods {
 	   cred14.sendKeys("PREM");
 	   cred15.sendKeys("M");
 	   test.log(Status.PASS, "Passenger 2 details given");
-	   cred16.click(); Thread.sleep(10000);
-	   cred17.click();
+	   cred16.click(); Thread.sleep(5000);
+	   test.log(Status.PASS, "Cost of tickets");
+	    cred17.click();
+		cred18.click();
+		cred19.click();
+		cred20.click();
 	   
 		//searchBtn.click();
 	}
