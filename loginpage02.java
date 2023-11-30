@@ -88,8 +88,8 @@ public class loginpage02 extends pagemethods02 {
 		Thread.sleep(5000);
 		shopping.click();
 		menu02.click();
-			brands.click();
-			test.log(Status.PASS, "Brands menu selected");
+		brands.click();
+		test.log(Status.PASS, "Brands menu selected");
 		applemenu.click();
 		test.log(Status.PASS, "Apple products selected");
 		applemac.click();
