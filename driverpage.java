@@ -42,6 +42,15 @@ public void urlpage()
 {
 	driver.get("https://www.spicejet.com/");
 }
+	public void alerts()
+{
+	try {
+		driver.switchTo().alert().dismiss();
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
 public void closepage()
 {
 	driver.close();
